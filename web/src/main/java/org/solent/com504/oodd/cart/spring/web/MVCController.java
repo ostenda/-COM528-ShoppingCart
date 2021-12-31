@@ -136,8 +136,28 @@ public class MVCController {
         model.addAttribute("selectedPage", "contact");
         return "contact";
     }
+    
+    @RequestMapping(value = "/catalog", method = {RequestMethod.GET, RequestMethod.POST})
+    public String catalogList(Model model, HttpSession session) {
 
-
+        // get sessionUser from session
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+        
+     //   List<ShoppingItem> availableItems= new ArrayList();
+     //   ShoppingItem item = new ShoppingItem();
+     //   item.setName("item");
+     //   availableItems.add(item);
+     
+        List<ShoppingItem> availableItems = shoppingService.getAvailableItems();
+                
+        model.addAttribute("availableItems", availableItems);
+        
+        // used to set tab selected
+        model.addAttribute("selectedPage", "admin");
+        return "catalog";
+    }
+ 
     /*
      * Default exception handler, catches all exceptions, redirects to friendly
      * error page. Does not catch request mapping errors
