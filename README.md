@@ -43,3 +43,48 @@ http://localhost:8080/shoppingCartApplication/home
 not
 
 http://localhost:8080/shoppingCartApplication/home.jsp
+
+
+# System Requirements
+The system requirements for this project is listed below 
+
+- A system running Windows 10 or newer.
+- [Java JDK](https://www.oracle.com/java/technologies/downloads/#java8) version 8 or newer.
+- [Apache Maven](https://maven.apache.org/install.html) 3.8 or newer
+- [Apache Tomcat 9](https://tomcat.apache.org/download-90.cgi)
+- One of the following web browsers: Google Chrome, Mozilla Firefox or Microsoft Edge. Internet Explorer is unsupported by this application.
+- The latest vesrion of [Netbeans](https://netbeans.apache.org/) (recommended).
+- The [easyUML](https://github.com/ossdcfos/easyuml) plugin within Netbeans is required to view/generate class diagrams. 
+
+
+# Objective for this project 
+The purpose of this project is to create a basic web-based catalogue and shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
+
+
+## Admin point of view
+
+
+
+
+## User point of view
+
+
+## Testing
+
+
+## User Tests
+
+| Test ID| Actual Result| Expected Reaction| Status |
+| --------- | --------------------------- | -------------------------------- | ------ |
+
+## Admin Tests
+
+| Test ID | Actual Result| Expected Reaction| Status |
+| --------- | --------------------------- | -------------------------------- | ------ |
+
+
+## Project Diagrams
+
+## Sequence diagram
+
+## Robustness diagram
