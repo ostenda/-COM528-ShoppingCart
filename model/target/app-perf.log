@@ -1,3 +1,0 @@
-15:23:19.108 [main] [o.s.c.o.p.t.PasswordUtilsTest] DEBUG org.solent.com504.oodd.password.test.PasswordUtilsTest - password=1234567890 hashedpw=$2a$12$zmGt7Enyk4.4lyO.xIanWe1EAdvdkBmRHH09Sr2TBXA3Q1VtK/aBu
-15:23:19.375 [main] [o.s.c.o.p.t.PasswordUtilsTest] DEBUG org.solent.com504.oodd.password.test.PasswordUtilsTest - password 1234567890 matches
-15:23:19.886 [main] [o.s.c.o.p.t.PasswordUtilsTest] DEBUG org.solent.com504.oodd.password.test.PasswordUtilsTest - password 1234567890 does not match

@@ -60,57 +60,16 @@ The system requirements for this project is listed below
 # Objective for this project 
 The purpose of this project is to create a basic web-based catalogue and shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
 
-###Use Cases
 
 ## Admin point of view
 
-|ID | Admin | Software Reaction|
-|------|--------|---------|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
-
-## Loged user point of view
-
-|ID | Admin | Software Reaction|
-|------|--------|---------|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
-
-## Anonymous user point of view
-
-|ID | Admin | Software Reaction|
-|------|--------|---------|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
 
 
 
+## User point of view
 
-### Testing
+
+## Testing
 
 
 ## User Tests
