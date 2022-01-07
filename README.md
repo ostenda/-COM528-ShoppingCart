@@ -66,23 +66,23 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 
 |ID | Admin | Software Reaction|
 |------|--------|---------|
-| 1 |Attempts to log in||The account is logged in and the user session becomes the type 'Administrator'|
-| 2 |Attempts to log out|The account is logged out and the user session becomes the type 'Anonymous'|
-| 3 |Loards the site as 'Administratior'|A home page is showing all of the options for other type of users plus options avaliable only for 'Administratior'|
+| 1 |Attempt to log in|The account is logged in and the user session becomes the type 'Administrator'|
+| 2 |Attempt to log out|The account is logged out and the user session becomes the type 'Anonymous'|
+| 3 |Loads the site as 'Administratior'|A home page is showing all of the options for other type of users plus options avaliable only for 'Administratior'|
 | 4 |Can add items to the catalog|Admin is able to add a new item to the catalog page for admin and user|
-| 5 |Attepmts to modify items in catalog page|Admin is able to see whole is of items and is able to modify all of the details |
+| 5 |Attempt to modify items in catalog page|Admin is able to see whole is of items and is able to modify all of the details |
 | 6 |Can remove users|Admin removes user data out of database|
-| 7 |||
-| 8 |||
-| 9 |||
-| 10 |||
+| 7 |Availability to view all users|Admin can view and modify all of customers accounts|
+| 8 |Availability to view past orders|Admin can view and search every invoice|
+| 9 |Can view all of users orders|Admin can view all orders in orders page|
+| 10 |Can log out from any page in the application|Account is logged out and the user session becomes the type 'Anonymous'|
 
 # Loged user point of view
 
-|ID | Admin | Software Reaction|
+|ID | Logged User| Software Reaction|
 |------|--------|---------|
-| 1 | 
-| 2 |
+| 1 |Attempts to log in|
+| 2 |Attempts to log out|
 | 3 |
 | 4 |
 | 5 |
@@ -94,7 +94,7 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 
 # Anonymous user point of view
 
-|ID | Admin | Software Reaction|
+|ID | Anonymous User| Software Reaction|
 |------|--------|---------|
 | 1 | 
 | 2 |
