@@ -60,9 +60,24 @@ The system requirements for this project is listed below
 # Objective for this project 
 The purpose of this project is to create a basic web-based catalogue and shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
 
-###Use Cases
+##Use Cases
 
-## Admin point of view
+# Admin point of view
+
+|ID | Admin | Software Reaction|
+|------|--------|---------|
+| 1 |Attempts to log in||The account is logged in and the user session becomes the type 'Administrator'|
+| 2 |Attempts to log out|The account is logged out and the user session becomes the type 'Anonymous'|
+| 3 |Loards the site as 'Administratior'|A home page is showing all of the options for other type of users plus options avaliable only for 'Administratior'|
+| 4 |Can add items to the catalog|Admin is able to add a new item to the catalog page for admin and user|
+| 5 |Attepmts to modify items in catalog page|Admin is able to see whole is of items and is able to modify all of the details |
+| 6 |Can remove users|Admin removes user data out of database|
+| 7 |||
+| 8 |||
+| 9 |||
+| 10 |||
+
+# Loged user point of view
 
 |ID | Admin | Software Reaction|
 |------|--------|---------|
@@ -77,22 +92,7 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 | 9 |
 | 10 |
 
-## Loged user point of view
-
-|ID | Admin | Software Reaction|
-|------|--------|---------|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
-
-## Anonymous user point of view
+# Anonymous user point of view
 
 |ID | Admin | Software Reaction|
 |------|--------|---------|
@@ -110,15 +110,15 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 
 
 
-### Testing
+## Testing
 
 
-## User Tests
+# User Tests
 
 | Test ID| Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
 
-## Admin Tests
+# Admin Tests
 
 | Test ID | Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
