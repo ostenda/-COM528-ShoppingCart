@@ -5,12 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%
-// request set in controller
-//    request.setAttribute("selectedPage","about");
-%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@page import="org.solent.com504.oodd.cart.model.dto.User"%>
+<%@page import="org.solent.com504.oodd.cart.model.dto.UserRole"%>
+<c:set var = "selectedPage" value = "catalog" scope="request"/>
 <jsp:include page="header.jsp" />
+
+
 <!-- start of catalog.jsp selectedPage=${selectedPage}-->
 
 
@@ -23,6 +24,7 @@
         <table class="table">
             <thead>
                 <tr>
+                    <th scope="col">Id</th>
                     <th scope="col">Name</th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>    
@@ -34,6 +36,7 @@
             <tbody>
                 <c:forEach var="item" items="${availableItems}">
                     <tr>
+                        <td>${item.id}</td>
                         <td>${item.name}</td>
                         <td>${item.price}</td>
                         <td>${item.quantity}</td>                        

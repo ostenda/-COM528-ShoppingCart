@@ -17,7 +17,7 @@
         <link rel="icon" href="../../favicon.ico">
         <!--<link rel="canonical" href="https://getbootstrap.com/docs/3.3/examples/navbar/">-->
 
-        <title>Navbar Template for Bootstrap</title>
+        <title>Shopping Card Application</title>
 
         <!-- Bootstrap core CSS -->
         <link href="./resources/css/bootstrap.min.css" rel="stylesheet">
@@ -47,13 +47,18 @@
                         <ul class="nav navbar-nav">
                             <li <% if ("home".equals(request.getAttribute("selectedPage"))) {%> class="active"  <% } %> ><a href="./home">Home</a></li> 
                             <li <% if ("about".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% } %> ><a href="./about">About</a></li> 
-                            <li <% if ("contact".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./contact">Contact</a></li>                          
+                            <li <% if ("contact".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./contact">Contact</a></li> 
+                            <li <% if ("basket".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./basket">Basket</a></li>
+                            <c:if test="${sessionUser.userRole != 'ANONYMOUS'}">
+                                <li <% if ("invoices".equals(request.getAttribute("selectedPage"))) {%>  class="active"  <% }%> ><a href="./invoices">Invoices</a></li> 
+                            </c:if>
                                 <c:if test="${sessionUser.userRole =='ADMINISTRATOR'}">
                                 <li class="dropdown" >
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Admin <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a href="./users">Manage Users</a></li>
-                                        <li><a href="./catalog">Manage Catalogue</a></li>
+                                        <li><a href="./catalogue">Manage Catalogue</a></li>
+                                        <li><a href="./properties">Manage Properties</a></li>
                                     </ul>
                                 </li>
                             </c:if>
