@@ -58,9 +58,10 @@ The system requirements for this project is listed below
 
 
 # Objective for this project 
-The purpose of this project is to create a basic web-based catalogue and shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
+The purpose of this project is to create a basic java web-based shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
+The system will have different levels of login such as: admin, customer user, anonymous. 
 
-##Use Cases
+#Use Cases
 
 # Admin point of view
 
@@ -81,31 +82,31 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 
 |ID | Logged User| Software Reaction|
 |------|--------|---------|
-| 1 |Attempts to log in|
-| 2 |Attempts to log out|
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
+| 1 |Attempts to log out|The account is logged out and the user session becomes the type 'Anonymous'|
+| 2 |Searches for items|Page is showing items matching the search text|
+| 3 |Loads the site as 'Customer'|A home page is showing all of the options for 'customer' type of users|
+| 4 |Availability to add the items to shopping card|Adds the item to the basket and shopping cart|
+| 5 |Availability to change user details|User is able to modify account details|
+| 6 |Availability to remove an item from their cart|Items are removed from the cart|
+| 7 |User can buy the items by pressing pucharse button|User redirect to the credic card page|
+| 8 |User enters correct credit card details|Application checks if the credit card details are correct and the funds are transferred|
+| 9 |User enters incorrect card details|The user is informed of an errror message and is able to the again|
+| 10 |User enters incorrect details|An error massage is show to try type correct details|
+| 11 |User enters correct details|Confirmation massage will show|
+| 12 |Can log out from any page in the application|Account is logged out and the user session becomes the type 'Anonymous'|
 
 # Anonymous user point of view
 
 |ID | Anonymous User| Software Reaction|
 |------|--------|---------|
-| 1 | 
-| 2 |
-| 3 |
-| 4 |
-| 5 |
-| 6 |
-| 7 |
-| 8 |
-| 9 |
-| 10 |
+| 1 |Can load the site|Redirects to home page
+| 2 |Searches for items|Page is showing items matching the search text|
+| 3 |Availability to add the items to shopping card|Adds the item to the basket and shopping cart|
+| 4 |Availability to remove an item from their cart|Items are removed from the cart|
+| 5 |Attempts to log in|The account is logged in and the user session becomes the type 'Customer'|
+| 6 |Attempts to log in with wrong accound details|The user is notified that the details were incorrect|
+| 7 |Attempts to create account|A new account is created|
+| 8 |Attempts to purchase items in cart|User is asked to sign-it|
 
 
 
@@ -114,6 +115,11 @@ The purpose of this project is to create a basic web-based catalogue and shoppin
 
 
 # User Tests
+
+| Test ID| Actual Result| Expected Reaction| Status |
+| --------- | --------------------------- | -------------------------------- | ------ |
+
+# Anonymous User Tests
 
 | Test ID| Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
