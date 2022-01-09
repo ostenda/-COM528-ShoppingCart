@@ -3,7 +3,6 @@ package org.solent.com504.oodd.cart.spring.web;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.List;
-import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.LogManager;
@@ -13,7 +12,6 @@ import org.solent.com504.oodd.cart.model.dto.User;
 import org.solent.com504.oodd.cart.model.dto.UserRole;
 import org.solent.com504.oodd.cart.model.service.ShoppingCart;
 import org.solent.com504.oodd.cart.model.service.ShoppingService;
-import org.solent.com504.oodd.cart.web.WebObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -125,7 +123,56 @@ public class MVCController {
         model.addAttribute("selectedPage", "about");
         return "about";
     }
+    
+    @RequestMapping(value = "/viewModifyItem", method = {RequestMethod.POST})
+    public String udpateItem(
+            @RequestParam(value = "name", required = true) String newName, 
+   	    @RequestParam(value = "price", required = false) String inputPrice,
+            @RequestParam(value = "quantity", required = false) String inputQuantity,             
+            Model model,
+            HttpSession session) {
+            User sessionUser = getSessionUser(session);
+             model.addAttribute("sessionUser", sessionUser);
+        
+        // used to set tab selected
+        model.addAttribute("selectedPage", "viewModifyItem");
+        return "/catalog";
+    }
+    
+      @RequestMapping(value = {"/createItem"}, method = RequestMethod.GET)
+    public String createItem(
+            Model model,
+            HttpSession session) {
+        String message = "";
+        String errorMessage = "";
 
+        model.addAttribute("selectedPage", "createItem");
+
+        LOG.debug("get create item page");
+
+        // check secure access to modifyUser profile
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+
+        model.addAttribute("message", message);
+        model.addAttribute("errorMessage", errorMessage);
+        return "viewModifyItem";
+    }
+    
+
+        @RequestMapping(value = "/checkout", method = {RequestMethod.GET, RequestMethod.POST})
+    public String viewcheckout(Model model, HttpSession session) {
+
+        // get sessionUser from session
+        User sessionUser = getSessionUser(session);
+        model.addAttribute("sessionUser", sessionUser);
+        
+        // used to set tab selected
+        model.addAttribute("selectedPage", "checkout");
+        return "checkout";
+    }
+    
+    
     @RequestMapping(value = "/contact", method = {RequestMethod.GET, RequestMethod.POST})
     public String contactCart(Model model, HttpSession session) {
 
@@ -139,21 +186,48 @@ public class MVCController {
     }
     
     @RequestMapping(value = "/catalog", method = {RequestMethod.GET, RequestMethod.POST})
-     public String catalogue(Model model, HttpSession session) {
+    public String catalogList(Model model, HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
-      //List<ShoppingItem> availableItems = new ArrayList();
-       // model.addAttribute("availableItems", availableItems);
-        // used to set tab selected
-
+     
         List<ShoppingItem> availableItems = shoppingService.getAvailableItems();
+                
         model.addAttribute("availableItems", availableItems);
-        model.addAttribute("selectedPage", "catalog");
+        
+        // used to set tab selected
+        model.addAttribute("selectedPage", "admin");
         return "catalog";
     }
- 
+    
+    @RequestMapping(value = "/basket", method = {RequestMethod.GET, RequestMethod.POST})
+    public String basketCart(@RequestParam(name = "action", required = false) String action,
+            @RequestParam(name = "item.name", required = false) String itemName,
+            @RequestParam(name = "item.uuid", required = false) String itemUuid,
+            Model model,
+            HttpSession session
+    ) {
+
+        // get sessionUser from session
+        User user = getSessionUser(session);
+        model.addAttribute("user", user);
+
+        // used to set tab selected
+        model.addAttribute("selectedPage", "basket");
+
+        String message = "";
+        String errorMessage = "";
+
+        List<ShoppingItem> shoppingCartItems = shoppingCart.getShoppingCartItems();
+
+        Double shoppingcartTotal = shoppingCart.getTotal();
+
+        // populate model with values
+        model.addAttribute("shoppingCartItems", shoppingCartItems);
+        model.addAttribute("shoppingcartTotal", shoppingcartTotal);
+        return "basket";
+   }
     /*
      * Default exception handler, catches all exceptions, redirects to friendly
      * error page. Does not catch request mapping errors
