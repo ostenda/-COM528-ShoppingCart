@@ -61,7 +61,7 @@ The system requirements for this project is listed below
 The purpose of this project is to create a basic java web-based shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
 The system will have different levels of login such as: admin, customer user, anonymous. 
 
-#Use Cases
+# Use Cases
 
 # Admin point of view
 
