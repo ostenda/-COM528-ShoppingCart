@@ -63,7 +63,7 @@ The system will have different levels of login such as: admin, customer user, an
 
 # Use Cases
 
-# Admin point of view
+## Admin point of view
 
 |ID | Admin | Software Reaction|
 |------|--------|---------|
@@ -78,7 +78,7 @@ The system will have different levels of login such as: admin, customer user, an
 | 9 |Can view all of users orders|Admin can view all orders in orders page|
 | 10 |Can log out from any page in the application|Account is logged out and the user session becomes the type 'Anonymous'|
 
-# Loged user point of view
+## Loged user point of view
 
 |ID | Logged User| Software Reaction|
 |------|--------|---------|
@@ -111,10 +111,10 @@ The system will have different levels of login such as: admin, customer user, an
 
 
 
-## Testing
+# Testing
 
 
-# Logged and Anonymous User Tests
+## Logged and Anonymous User Tests
 
 | Test ID| Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
@@ -129,7 +129,7 @@ The system will have different levels of login such as: admin, customer user, an
 
 
 
-# Admin Tests
+## Admin Tests
 
 | Test ID | Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
@@ -140,11 +140,17 @@ The system will have different levels of login such as: admin, customer user, an
 | T5 | Admin can log out | Account is logged out and user is redirected to home page in annonymous mode|  ✅  |
 
 
-## Project Diagrams
+## Use Cases Diagram
+
+![UseCasesDiagram](/Diagrams/UseCaseDiagram.drawio.PNG "Plan")
 
 ## Sequence diagram
 
+![SequenceDiagram](/Diagrams/SequenceDiagramFinal.drawio.PNG "Plan")
+
 ## Robustness diagram
+
+![RobustnessDiagram](/Diagrams/Robustness.drawio.PNG "Plan")
 
 
 ## JavaDoc
