@@ -107,7 +107,7 @@ Anonymous User
 | 11 |User enters correct details|Confirmation massage will show|
 | 12 |Can log out from any page in the application|Account is logged out and the user session becomes the type 'Anonymous'|
 
-# Anonymous user point of view
+## Anonymous user point of view
 
 |ID | Anonymous User| Software Reaction|
 |------|--------|---------|

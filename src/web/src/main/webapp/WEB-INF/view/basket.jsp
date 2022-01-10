@@ -48,8 +48,9 @@
      
     </table>
             <td>
-                <form action="./checkout" method="get">
-                    <button type="submit" >Checkout</button>
+                 <form action="./checkout" method="get">
+                    <button type="submit">Checkout</button>
+                    <input type="hidden" name="action" value="checkout">
                 </form>
             </td>
 </main>

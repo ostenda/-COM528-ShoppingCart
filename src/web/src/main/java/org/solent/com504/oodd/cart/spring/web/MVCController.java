@@ -12,6 +12,7 @@ import org.solent.com504.oodd.cart.model.dto.User;
 import org.solent.com504.oodd.cart.model.dto.UserRole;
 import org.solent.com504.oodd.cart.model.service.ShoppingCart;
 import org.solent.com504.oodd.cart.model.service.ShoppingService;
+import org.solent.com504.oodd.cart.web.WebObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -150,18 +151,43 @@ public class MVCController {
         return "viewModifyItem";
     }
     
-
-        @RequestMapping(value = "/checkout", method = {RequestMethod.GET, RequestMethod.POST})
-    public String viewcheckout(Model model, HttpSession session) {
+    
+    @RequestMapping(value = "/checkout", method = RequestMethod.GET)
+    public String viewCheckout(
+            Model model,
+            HttpSession session) {
 
         // get sessionUser from session
         User sessionUser = getSessionUser(session);
         model.addAttribute("sessionUser", sessionUser);
-        
+
+
         // used to set tab selected
         model.addAttribute("selectedPage", "checkout");
+
+        String message = "";
+        String errorMessage = "";
+
+        if (UserRole.ANONYMOUS.equals(sessionUser.getUserRole())) {
+            errorMessage = "You must be logged in to checkout!";
+            model.addAttribute("errorMessage", errorMessage);
+            return "checkout";
+        }
+
+
+        List<ShoppingItem> shoppingCartItems = shoppingCart.getShoppingCartItems();
+
+        Double shoppingcartTotal = shoppingCart.getTotal();
+
+        // populate model with values
+        model.addAttribute("shoppingCartItems", shoppingCartItems);
+        model.addAttribute("shoppingcartTotal", shoppingcartTotal);
+        model.addAttribute("message", message);
+        model.addAttribute("errorMessage", errorMessage);
         return "checkout";
     }
+
+    
     
     
     @RequestMapping(value = "/contact", method = {RequestMethod.GET, RequestMethod.POST})
