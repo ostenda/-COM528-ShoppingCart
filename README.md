@@ -142,15 +142,15 @@ The system will have different levels of login such as: admin, customer user, an
 
 ## Use Cases Diagram
 
-![UseCasesDiagram](/Diagrams/UseCaseDiagram.drawio.PNG "Plan")
+![UseCasesDiagram](src/Diagrams/UseCaseDiagram.drawio.png)
 
 ## Sequence diagram
 
-![SequenceDiagram](/Diagrams/SequenceDiagramFinal.drawio.PNG "Plan")
+![SequenceDiagram](src/Diagrams/SequenceDiagramFinal.drawio.png)
 
 ## Robustness diagram
 
-![RobustnessDiagram](/Diagrams/Robustness.drawio.PNG "Plan")
+![RobustnessDiagram](src/Diagrams/Robustness.drawio.png)
 
 
 ## JavaDoc
