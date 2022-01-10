@@ -1,7 +1,11 @@
-# Shopping Application program template
+# Shopping Application
 
-This is based upon the Shopping Cart Using Spring with Bootstrap in session 6
 
+
+
+## Links
+
+- [Shopping Application](https://github.com/ostenda/-COM528-ShoppingCart "Shopping Application")
 
 
 ### To run using stand alone spring boot maven plugin
@@ -59,9 +63,17 @@ The system requirements for this project is listed below
 
 # Objective for this project 
 The purpose of this project is to create a basic java web-based shopping cart system that allows users to search for items, add them to a shopping cart, and then purchase them.
-The system will have different levels of login such as: admin, customer user, anonymous. 
+The system will have different levels of users such as: admin, customer user, anonymous and caralogue of items viseable for all users.
 
 # Use Cases
+
+This section contains the different use cases for this application. The use cases are written from the perspective of the different types of users.
+
+Administrator
+
+Logged User(customer)
+
+Anonymous User
 
 ## Admin point of view
 
@@ -111,7 +123,7 @@ The system will have different levels of login such as: admin, customer user, an
 
 
 
-# Testing
+# Test Plan
 
 
 ## Logged and Anonymous User Tests
@@ -142,13 +154,20 @@ The system will have different levels of login such as: admin, customer user, an
 
 ## Use Cases Diagram
 
+Shows the interaction between systems and Actors and the relationship between them. 
+
 ![UseCasesDiagram](/Diagrams/UseCaseDiagram.drawio.PNG "Plan")
 
 ## Sequence diagram
 
+Shows dependencies in the transmission of messages between objects, i.e. dependencies in the flow of control between objects.
+
 ![SequenceDiagram](/Diagrams/SequenceDiagramFinal.drawio.PNG "Plan")
 
 ## Robustness diagram
+
+Robustness diagrams describe the system usage within the context of the object model. Represents the interfaces between the actors and the system.he use case logic and other classes.
+
 
 ![RobustnessDiagram](/Diagrams/Robustness.drawio.PNG "Plan")
 
