@@ -156,20 +156,20 @@ Anonymous User
 
 Shows the interaction between systems and Actors and the relationship between them. 
 
-![UseCasesDiagram](/Diagrams/UseCaseDiagram.drawio.PNG "Plan")
+![UseCasesDiagram](src/Diagrams/UseCaseDiagram.drawio.png)
 
 ## Sequence diagram
 
 Shows dependencies in the transmission of messages between objects, i.e. dependencies in the flow of control between objects.
 
-![SequenceDiagram](/Diagrams/SequenceDiagramFinal.drawio.PNG "Plan")
+![SequenceDiagram](src/Diagrams/SequenceDiagramFinal.drawio.png)
 
 ## Robustness diagram
 
 Robustness diagrams describe the system usage within the context of the object model. Represents the interfaces between the actors and the system.he use case logic and other classes.
 
 
-![RobustnessDiagram](/Diagrams/Robustness.drawio.PNG "Plan")
+![RobustnessDiagram](src/Diagrams/Robustness.drawio.png)
 
 
 ## JavaDoc
