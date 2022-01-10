@@ -171,6 +171,11 @@ Robustness diagrams describe the system usage within the context of the object m
 
 ![RobustnessDiagram](src/Diagrams/Robustness.drawio.png)
 
+## Issues and Problems
+
+The application does not connect to the bank and transactions. It also does not have the function of searching by name as it is included in use cases and diagrams.
+Testing could also have been done in more detail. The code is a bit chaotic and a lot of things on the UI level don't work properly (admin menu only appears in the trolls tab) 
+
 
 ## JavaDoc
 
