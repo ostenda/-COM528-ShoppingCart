@@ -73,7 +73,7 @@ public class InvoiceRepositoryTest {
         shoppingItem1.setName("item 1");
         shoppingItem1.setPrice(100.1);
         shoppingItem1.setQuantity(1);
-        shoppingItem1.setUuid(UUID.randomUUID().toString());
+      //  shoppingItem1.setUuid(UUID.randomUUID().toString());
         shoppingItem1 = shoppingItemCatalogRepository.save(shoppingItem1);
 
         List<ShoppingItem> purchasedItems = new ArrayList<ShoppingItem>();

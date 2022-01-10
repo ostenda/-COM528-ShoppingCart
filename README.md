@@ -114,20 +114,30 @@ The system will have different levels of login such as: admin, customer user, an
 ## Testing
 
 
-# User Tests
+# Logged and Anonymous User Tests
 
 | Test ID| Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
+| T1 | User loads site| Server is running and you will be redirected to a home page | ✅ |
+| T2 | User can log in | application logs in user or creates user or gives error due to wrong details  |  ✅ |
+| T3 | User adds an item | Apllication gets items and adds them to cart | ✅ |
+| T4 | User press on the basket page and purchase items | Application redirect to basket page and the purchase button will take the user to credit card sequence | ❌ |
+| T5 | User removes item from cart | Item is removed from the cart | ✅ | 
+| T6 | User enters account details and submits | The transaction passes, with the user being notified with details of where it went. | ❌ | The tranaction page was't designed|
+| T7 | User views order in the "my orders" page | application shows all orders and order status on the "my orders" page | ✅  |
+| T8 | User can log out | redirects them to home page in annonymous mode |  ✅   |
 
-# Anonymous User Tests
 
-| Test ID| Actual Result| Expected Reaction| Status |
-| --------- | --------------------------- | -------------------------------- | ------ |
 
 # Admin Tests
 
 | Test ID | Actual Result| Expected Reaction| Status |
 | --------- | --------------------------- | -------------------------------- | ------ |
+| T1 | Admin can log in | Admin logs in admin mode| ✅ |
+| T2 | Admin can modify user| Admin is able to remove or add users | ✅  |
+| T3 | Admin can modify catalog| Admin is able to remove or add items | ✅ |
+| T4 | Admin can view all users orders | When "my orders" is pressed on home page it will direct admin to view all orders | ✅  | 
+| T5 | Admin can log out | Account is logged out and user is redirected to home page in annonymous mode|  ✅  |
 
 
 ## Project Diagrams
@@ -135,3 +145,14 @@ The system will have different levels of login such as: admin, customer user, an
 ## Sequence diagram
 
 ## Robustness diagram
+
+
+## JavaDoc
+
+To view JavaDocs, navigate to the project folder within a command prompt and run:
+
+`mvn javadoc:javadoc`
+
+Or within Netbeans, right-click on a project and select "Generate Javadoc".
+
+Visit https://maven.apache.org/plugins/maven-javadoc-plugin/index.html for more information.

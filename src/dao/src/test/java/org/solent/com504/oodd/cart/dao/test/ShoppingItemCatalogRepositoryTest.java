@@ -54,7 +54,7 @@ public class ShoppingItemCatalogRepositoryTest {
         shoppingItem1.setName("item 1");
         shoppingItem1.setPrice(100.1);
         shoppingItem1.setQuantity(1);
-        shoppingItem1.setUuid(UUID.randomUUID().toString());
+      //  shoppingItem1.setUuid(UUID.randomUUID().toString());
 
         shoppingItem1 = shoppingItemCatalogRepository.save(shoppingItem1);
 
@@ -62,7 +62,7 @@ public class ShoppingItemCatalogRepositoryTest {
         shoppingItem2.setName("item 1");
         shoppingItem2.setPrice(100.1);
         shoppingItem2.setQuantity(1);
-        shoppingItem2.setUuid(UUID.randomUUID().toString());
+      //  shoppingItem2.setUuid(UUID.randomUUID().toString());
 
         shoppingItem2 = shoppingItemCatalogRepository.save(shoppingItem2);
 
